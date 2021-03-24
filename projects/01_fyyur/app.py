@@ -188,24 +188,7 @@ def delete_venue(venue_id):
   venueShows = Show.query.filter(Show.venue_id == venue_id)
   for venueShow in venueShows:
     DBActionSuccessful(Show.query.filter_by(id=venueShow.id).delete)
-    # print(success)
   success = DBActionSuccessful(Venue.query.filter_by(id=venue_id).delete)
-  # error = False
-  # try:
-  #   # venue = Venue.query.get(venue_id)
-  #   # db.session.delete(venue)
-  #   print(venue_id)
-  #   Venue.query.filter_by(id=venue_id).delete()
-  #   db.session.commit()
-  # except:
-  #   error = True
-  #   db.session.rollback()
-  # finally:
-  #   db.session.close()
-  # if error: 
-  #   flash(f'An error occurred. Venue {venue_id} could not be deleted.')
-  # if not error: 
-  #   flash(f'Venue {venue_id} was successfully deleted.')
   FlashMessage(success, 'Venue was successfully deleted!', 'Venue could not be deleted.')
 
   return render_template('pages/home.html')
