@@ -2,7 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import Form
 from forms import *
 
-db = SQLAlchemy()
+from app import db
 
 #----------------------------------------------------------------------------#
 # Models.
