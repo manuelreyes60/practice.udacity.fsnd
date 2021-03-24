@@ -1,8 +1,8 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import Form
-from forms import *
+from datetime import datetime
 
-from app import db
+db = SQLAlchemy()
 
 #----------------------------------------------------------------------------#
 # Models.
@@ -23,6 +23,7 @@ class Venue(db.Model):
     website = db.Column(db.String(120))
     seeking_talent = db.Column(db.Boolean, default=False)
     seeking_description = db.Column(db.String(300))
+    shows = db.relationship('Show', backref=db.backref('Venue'), lazy="joined")
     past_shows = []
     upcoming_shows = []
 
@@ -62,6 +63,7 @@ class Artist(db.Model):
     website = db.Column(db.String(120))
     seeking_venue = db.Column(db.Boolean, default=False)
     seeking_description = db.Column(db.String(300))
+    shows = db.relationship('Show', backref=db.backref('Artist'), lazy="joined")
 
     def GetPastShows(self):
       pastShows = db.session.query(Show).join(Venue).filter(Show.artist_id==self.id).filter(Show.start_time < datetime.now()).all()
