@@ -75,8 +75,10 @@ GET '/categories'
 GET ...
 POST ...
 DELETE ...
+```
 
 GET '/categories'
+```
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
 - Request Arguments: None
 - Returns: An object with a single key, categories, that contains a object of id: category_string key:value pairs. 
@@ -86,10 +88,166 @@ GET '/categories'
 '4' : "History",
 '5' : "Entertainment",
 '6' : "Sports"}
-
 ```
 
+GET '/questions'
 
+```
+- Fetches the paginated questions, the total amount of questions, and the categories.
+- Request Arguments: page number (Default: 1)
+- Returns:
+
+{
+  "categories": {
+    "1": "Science", 
+    "2": "Art", 
+    "3": "Geography", 
+    "4": "History", 
+    "5": "Entertainment", 
+    "6": "Sports"
+  }, 
+  "current_category": null, 
+  "questions": [
+    {
+      "answer": ..., 
+      "category": ..., 
+      "difficulty": ..., 
+      "id": ..., 
+      "question": ...
+    },
+    {...}, 
+  ], 
+  "success": true, 
+  "total_questions": ...
+}
+```
+DELETE '/questions/<int:id>'
+```
+- Delete the question with the input id
+- Request Arguments: id
+- Returns:
+
+On Success: 204 NO CONTENT
+On Not Found: 
+{
+    "error": 404,
+    "message": "resource not found",
+    "success": false
+}
+On Unprocessable:
+{
+    "error": 422,
+    "message": "unprocessable",
+    "success": false
+}
+
+```
+POST '/questions'
+```
+- Creates a new question
+- Request Arguments:
+{
+      "answer": ..., 
+      "category": ..., 
+      "difficulty": ..., 
+      "question": ...
+}
+- Returns:
+On Success:
+{
+    "question": {
+        "answer": ...,
+        "category": ...,
+        "difficulty": ...,
+        "id": ...,
+        "question": ...
+    },
+    "success": true
+}
+On Bad Request:
+{
+    "error": 400,
+    "message": "bad request",
+    "success": false
+}
+On Unprocessable:
+{
+    "error": 422,
+    "message": "unprocessable",
+    "success": false
+}
+```
+POST '/questions/search'
+```
+- Search a question by its question statement
+- Request Arguments:
+{
+      "searchTerm": ...  
+}
+- Returns:
+On Success:
+{
+    "current_category": null,
+    "questions": [
+        {
+            "answer": ...,
+            "category": ...,
+            "difficulty": ...,
+            "id": ...,
+            "question": ...
+        }, {...}
+    ],
+    "success": true,
+    "total_questions": ...
+}
+On Not Found:
+{
+    "current_category": null,
+    "questions": [],
+    "success": true,
+    "total_questions": 0
+}
+```
+GET '/categories/<int:id>/questions'
+```
+- Fetch questions from a category
+- Request Arguments: category id
+- Returns:
+{
+    "current_category": ...,
+    "questions": [
+        {
+            "answer": ...,
+            "category": ...,
+            "difficulty": ...,
+            "id": ...,
+            "question": ...
+        }, {...}
+    ],
+    "success": true,
+    "total_questions": ...
+}
+```
+POST '/quizzes'
+```
+- Fetches a question for the quiz.
+- Request Arguments: list of previously played questions and the category being played.
+{
+    "previous_questions": [],
+    "quiz_category": {  "id": ... }
+}
+- Returns: A random (not previously played) question from the desired category
+{
+    "question": {
+        "answer": ...,
+        "category": ...,
+        "difficulty": ...,
+        "id": ...,
+        "question": ...
+    },
+    "success": true
+}
+```
 ## Testing
 To run the tests, run
 ```
