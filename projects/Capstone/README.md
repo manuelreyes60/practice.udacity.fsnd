@@ -24,6 +24,13 @@ There are three Roles:
 
 Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 
+### Heroku Deployment
+
+Move to the root folder and run:
+```
+git subtree push --prefix projects/Capstone  heroku master
+```
+
 ### PIP Dependencies
 
 Once you have your virtual environment setup and running, install dependencies by naviging to the Capstone directory and running:
