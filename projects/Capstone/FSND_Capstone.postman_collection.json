@@ -11,6 +11,16 @@
 				{
 					"name": "Add Movie",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNYQUJxQlpUV2V4WXVUTXIydWlTQyJ9.eyJpc3MiOiJodHRwczovL21hbnVlbHJleWVzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDkwMTQ4NzYxZGQ3NDAwNjkyYjBmYmQiLCJhdWQiOiJDYXBzdG9uZUZTTkRfQVBJIiwiaWF0IjoxNjIwNjc3MjE2LCJleHAiOjE2MjA3NjM2MTYsImF6cCI6IlFiRThFSU1GUGowb0U2QXNXT2pxMUcyaDdtVUpBMzRtIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.NXURH0C8bggCK0z3tfCguLAoFWyfhi6FHCR_FNlo9g4Ol8qZGsszdqgGS_2NfynodtyLQErwdp_kOXpPlidJyBnp55kB3sxJ1kXZnndHasREqzi0JzQksFmT-fF-xV45S7aXYW8c6VNC8XXE-Vs16vcxghJ5XE1ic9lFS5cXV9MJIAf_VgVnT6I2yELjcGGBW6hkPfWTuzxnq0BQZzFhngaNWD3s9FcDFgH9aZiNvJpVtIwKCgAywWNKp3BZBEvAq7eT4p7YrA-F3Zj1pklUS2cb0TbcdKQ_2w8Pb85Jdc7VhnsIr1RWoKVbFiqkKnAg8aYumCtXM_KPH3JmuCQ_nQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -42,6 +52,16 @@
 				{
 					"name": "Get Movies",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNYQUJxQlpUV2V4WXVUTXIydWlTQyJ9.eyJpc3MiOiJodHRwczovL21hbnVlbHJleWVzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDkwMTQ4NzYxZGQ3NDAwNjkyYjBmYmQiLCJhdWQiOiJDYXBzdG9uZUZTTkRfQVBJIiwiaWF0IjoxNjIwNjc3MjE2LCJleHAiOjE2MjA3NjM2MTYsImF6cCI6IlFiRThFSU1GUGowb0U2QXNXT2pxMUcyaDdtVUpBMzRtIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.NXURH0C8bggCK0z3tfCguLAoFWyfhi6FHCR_FNlo9g4Ol8qZGsszdqgGS_2NfynodtyLQErwdp_kOXpPlidJyBnp55kB3sxJ1kXZnndHasREqzi0JzQksFmT-fF-xV45S7aXYW8c6VNC8XXE-Vs16vcxghJ5XE1ic9lFS5cXV9MJIAf_VgVnT6I2yELjcGGBW6hkPfWTuzxnq0BQZzFhngaNWD3s9FcDFgH9aZiNvJpVtIwKCgAywWNKp3BZBEvAq7eT4p7YrA-F3Zj1pklUS2cb0TbcdKQ_2w8Pb85Jdc7VhnsIr1RWoKVbFiqkKnAg8aYumCtXM_KPH3JmuCQ_nQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -69,7 +89,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNYQUJxQlpUV2V4WXVUTXIydWlTQyJ9.eyJpc3MiOiJodHRwczovL21hbnVlbHJleWVzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDkwMTJiYmJmM2FkMDAwNzBjZDRhY2IiLCJhdWQiOiJDYXBzdG9uZUZTTkRfQVBJIiwiaWF0IjoxNjIwMzczMTEwLCJleHAiOjE2MjA0NTk1MTAsImF6cCI6IlFiRThFSU1GUGowb0U2QXNXT2pxMUcyaDdtVUpBMzRtIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyJdfQ.bgL9nEW-7uyah_8s13VmbNP5hlCVJ7zPuqF4JF6xwbVJFgd2JJEwQRdglcw2lLCrSGCstbOUm7sL_TNocmq3t03HYyTUITPeBciyETW_vsU4m_fiPecprJRlLoeI0M6pf3nkIMLeba2tF37GpvvY89fkc7jz7-jhxsO6pr7LB-iKYN2_U9xbUThqU99IIuuOb6rLsKXGRiqUC-BLzJ12m7XpyYs9Of6vKwj-1LBK6IpvTNdHk-AgsB0mVjAvgHjb7YCSjkfPkmHMEMsdcDsb86joYslQC29UsPARgSFWlFmLfiIuFV1jro_ZIVb3HWiiqR26hUod_eiYP1rTxGnk7A",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNYQUJxQlpUV2V4WXVUTXIydWlTQyJ9.eyJpc3MiOiJodHRwczovL21hbnVlbHJleWVzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDkwMTQ4NzYxZGQ3NDAwNjkyYjBmYmQiLCJhdWQiOiJDYXBzdG9uZUZTTkRfQVBJIiwiaWF0IjoxNjIwNjc3MjE2LCJleHAiOjE2MjA3NjM2MTYsImF6cCI6IlFiRThFSU1GUGowb0U2QXNXT2pxMUcyaDdtVUpBMzRtIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.NXURH0C8bggCK0z3tfCguLAoFWyfhi6FHCR_FNlo9g4Ol8qZGsszdqgGS_2NfynodtyLQErwdp_kOXpPlidJyBnp55kB3sxJ1kXZnndHasREqzi0JzQksFmT-fF-xV45S7aXYW8c6VNC8XXE-Vs16vcxghJ5XE1ic9lFS5cXV9MJIAf_VgVnT6I2yELjcGGBW6hkPfWTuzxnq0BQZzFhngaNWD3s9FcDFgH9aZiNvJpVtIwKCgAywWNKp3BZBEvAq7eT4p7YrA-F3Zj1pklUS2cb0TbcdKQ_2w8Pb85Jdc7VhnsIr1RWoKVbFiqkKnAg8aYumCtXM_KPH3JmuCQ_nQ",
 									"type": "string"
 								}
 							]
@@ -77,15 +97,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/movies/1",
-							"protocol": "http",
+							"raw": "https://fsnd-capstone-manuelreyes.herokuapp.com/movies/1",
+							"protocol": "https",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"fsnd-capstone-manuelreyes",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"movies",
 								"1"
@@ -97,18 +115,26 @@
 				{
 					"name": "Delete Movie",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNYQUJxQlpUV2V4WXVUTXIydWlTQyJ9.eyJpc3MiOiJodHRwczovL21hbnVlbHJleWVzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDkwMTQ4NzYxZGQ3NDAwNjkyYjBmYmQiLCJhdWQiOiJDYXBzdG9uZUZTTkRfQVBJIiwiaWF0IjoxNjIwNjc3MjE2LCJleHAiOjE2MjA3NjM2MTYsImF6cCI6IlFiRThFSU1GUGowb0U2QXNXT2pxMUcyaDdtVUpBMzRtIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.NXURH0C8bggCK0z3tfCguLAoFWyfhi6FHCR_FNlo9g4Ol8qZGsszdqgGS_2NfynodtyLQErwdp_kOXpPlidJyBnp55kB3sxJ1kXZnndHasREqzi0JzQksFmT-fF-xV45S7aXYW8c6VNC8XXE-Vs16vcxghJ5XE1ic9lFS5cXV9MJIAf_VgVnT6I2yELjcGGBW6hkPfWTuzxnq0BQZzFhngaNWD3s9FcDFgH9aZiNvJpVtIwKCgAywWNKp3BZBEvAq7eT4p7YrA-F3Zj1pklUS2cb0TbcdKQ_2w8Pb85Jdc7VhnsIr1RWoKVbFiqkKnAg8aYumCtXM_KPH3JmuCQ_nQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/movies/1",
-							"protocol": "http",
+							"raw": "https://fsnd-capstone-manuelreyes.herokuapp.com/movies/1",
+							"protocol": "https",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"fsnd-capstone-manuelreyes",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"movies",
 								"1"
@@ -120,18 +146,26 @@
 				{
 					"name": "Get Movie Cast",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNYQUJxQlpUV2V4WXVUTXIydWlTQyJ9.eyJpc3MiOiJodHRwczovL21hbnVlbHJleWVzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDkwMTQ4NzYxZGQ3NDAwNjkyYjBmYmQiLCJhdWQiOiJDYXBzdG9uZUZTTkRfQVBJIiwiaWF0IjoxNjIwNjc3MjE2LCJleHAiOjE2MjA3NjM2MTYsImF6cCI6IlFiRThFSU1GUGowb0U2QXNXT2pxMUcyaDdtVUpBMzRtIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.NXURH0C8bggCK0z3tfCguLAoFWyfhi6FHCR_FNlo9g4Ol8qZGsszdqgGS_2NfynodtyLQErwdp_kOXpPlidJyBnp55kB3sxJ1kXZnndHasREqzi0JzQksFmT-fF-xV45S7aXYW8c6VNC8XXE-Vs16vcxghJ5XE1ic9lFS5cXV9MJIAf_VgVnT6I2yELjcGGBW6hkPfWTuzxnq0BQZzFhngaNWD3s9FcDFgH9aZiNvJpVtIwKCgAywWNKp3BZBEvAq7eT4p7YrA-F3Zj1pklUS2cb0TbcdKQ_2w8Pb85Jdc7VhnsIr1RWoKVbFiqkKnAg8aYumCtXM_KPH3JmuCQ_nQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/movies/1/cast",
-							"protocol": "http",
+							"raw": "https://fsnd-capstone-manuelreyes.herokuapp.com/movies/1/cast",
+							"protocol": "https",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"fsnd-capstone-manuelreyes",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"movies",
 								"1",
@@ -144,6 +178,16 @@
 				{
 					"name": "Edit Movie",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNYQUJxQlpUV2V4WXVUTXIydWlTQyJ9.eyJpc3MiOiJodHRwczovL21hbnVlbHJleWVzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDkwMTQ4NzYxZGQ3NDAwNjkyYjBmYmQiLCJhdWQiOiJDYXBzdG9uZUZTTkRfQVBJIiwiaWF0IjoxNjIwNjc3MjE2LCJleHAiOjE2MjA3NjM2MTYsImF6cCI6IlFiRThFSU1GUGowb0U2QXNXT2pxMUcyaDdtVUpBMzRtIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.NXURH0C8bggCK0z3tfCguLAoFWyfhi6FHCR_FNlo9g4Ol8qZGsszdqgGS_2NfynodtyLQErwdp_kOXpPlidJyBnp55kB3sxJ1kXZnndHasREqzi0JzQksFmT-fF-xV45S7aXYW8c6VNC8XXE-Vs16vcxghJ5XE1ic9lFS5cXV9MJIAf_VgVnT6I2yELjcGGBW6hkPfWTuzxnq0BQZzFhngaNWD3s9FcDFgH9aZiNvJpVtIwKCgAywWNKp3BZBEvAq7eT4p7YrA-F3Zj1pklUS2cb0TbcdKQ_2w8Pb85Jdc7VhnsIr1RWoKVbFiqkKnAg8aYumCtXM_KPH3JmuCQ_nQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PATCH",
 						"header": [],
 						"body": {
@@ -181,6 +225,16 @@
 				{
 					"name": "Add Actor",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNYQUJxQlpUV2V4WXVUTXIydWlTQyJ9.eyJpc3MiOiJodHRwczovL21hbnVlbHJleWVzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDkwMTQ4NzYxZGQ3NDAwNjkyYjBmYmQiLCJhdWQiOiJDYXBzdG9uZUZTTkRfQVBJIiwiaWF0IjoxNjIwNjc3MjE2LCJleHAiOjE2MjA3NjM2MTYsImF6cCI6IlFiRThFSU1GUGowb0U2QXNXT2pxMUcyaDdtVUpBMzRtIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.NXURH0C8bggCK0z3tfCguLAoFWyfhi6FHCR_FNlo9g4Ol8qZGsszdqgGS_2NfynodtyLQErwdp_kOXpPlidJyBnp55kB3sxJ1kXZnndHasREqzi0JzQksFmT-fF-xV45S7aXYW8c6VNC8XXE-Vs16vcxghJ5XE1ic9lFS5cXV9MJIAf_VgVnT6I2yELjcGGBW6hkPfWTuzxnq0BQZzFhngaNWD3s9FcDFgH9aZiNvJpVtIwKCgAywWNKp3BZBEvAq7eT4p7YrA-F3Zj1pklUS2cb0TbcdKQ_2w8Pb85Jdc7VhnsIr1RWoKVbFiqkKnAg8aYumCtXM_KPH3JmuCQ_nQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -193,15 +247,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/actors",
-							"protocol": "http",
+							"raw": "https://fsnd-capstone-manuelreyes.herokuapp.com/actors",
+							"protocol": "https",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"fsnd-capstone-manuelreyes",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"actors"
 							]
@@ -212,18 +264,26 @@
 				{
 					"name": "Get Actors",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNYQUJxQlpUV2V4WXVUTXIydWlTQyJ9.eyJpc3MiOiJodHRwczovL21hbnVlbHJleWVzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDkwMTQ4NzYxZGQ3NDAwNjkyYjBmYmQiLCJhdWQiOiJDYXBzdG9uZUZTTkRfQVBJIiwiaWF0IjoxNjIwNjc3MjE2LCJleHAiOjE2MjA3NjM2MTYsImF6cCI6IlFiRThFSU1GUGowb0U2QXNXT2pxMUcyaDdtVUpBMzRtIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.NXURH0C8bggCK0z3tfCguLAoFWyfhi6FHCR_FNlo9g4Ol8qZGsszdqgGS_2NfynodtyLQErwdp_kOXpPlidJyBnp55kB3sxJ1kXZnndHasREqzi0JzQksFmT-fF-xV45S7aXYW8c6VNC8XXE-Vs16vcxghJ5XE1ic9lFS5cXV9MJIAf_VgVnT6I2yELjcGGBW6hkPfWTuzxnq0BQZzFhngaNWD3s9FcDFgH9aZiNvJpVtIwKCgAywWNKp3BZBEvAq7eT4p7YrA-F3Zj1pklUS2cb0TbcdKQ_2w8Pb85Jdc7VhnsIr1RWoKVbFiqkKnAg8aYumCtXM_KPH3JmuCQ_nQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/actors",
-							"protocol": "http",
+							"raw": "https://fsnd-capstone-manuelreyes.herokuapp.com/actors",
+							"protocol": "https",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"fsnd-capstone-manuelreyes",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"actors"
 							]
@@ -234,18 +294,26 @@
 				{
 					"name": "Get Actor",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNYQUJxQlpUV2V4WXVUTXIydWlTQyJ9.eyJpc3MiOiJodHRwczovL21hbnVlbHJleWVzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDkwMTQ4NzYxZGQ3NDAwNjkyYjBmYmQiLCJhdWQiOiJDYXBzdG9uZUZTTkRfQVBJIiwiaWF0IjoxNjIwNjc3MjE2LCJleHAiOjE2MjA3NjM2MTYsImF6cCI6IlFiRThFSU1GUGowb0U2QXNXT2pxMUcyaDdtVUpBMzRtIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.NXURH0C8bggCK0z3tfCguLAoFWyfhi6FHCR_FNlo9g4Ol8qZGsszdqgGS_2NfynodtyLQErwdp_kOXpPlidJyBnp55kB3sxJ1kXZnndHasREqzi0JzQksFmT-fF-xV45S7aXYW8c6VNC8XXE-Vs16vcxghJ5XE1ic9lFS5cXV9MJIAf_VgVnT6I2yELjcGGBW6hkPfWTuzxnq0BQZzFhngaNWD3s9FcDFgH9aZiNvJpVtIwKCgAywWNKp3BZBEvAq7eT4p7YrA-F3Zj1pklUS2cb0TbcdKQ_2w8Pb85Jdc7VhnsIr1RWoKVbFiqkKnAg8aYumCtXM_KPH3JmuCQ_nQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/actors/1",
-							"protocol": "http",
+							"raw": "https://fsnd-capstone-manuelreyes.herokuapp.com/actors/1",
+							"protocol": "https",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"fsnd-capstone-manuelreyes",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"actors",
 								"1"
@@ -257,18 +325,26 @@
 				{
 					"name": "Delete Actor",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNYQUJxQlpUV2V4WXVUTXIydWlTQyJ9.eyJpc3MiOiJodHRwczovL21hbnVlbHJleWVzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDkwMTQ4NzYxZGQ3NDAwNjkyYjBmYmQiLCJhdWQiOiJDYXBzdG9uZUZTTkRfQVBJIiwiaWF0IjoxNjIwNjc3MjE2LCJleHAiOjE2MjA3NjM2MTYsImF6cCI6IlFiRThFSU1GUGowb0U2QXNXT2pxMUcyaDdtVUpBMzRtIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.NXURH0C8bggCK0z3tfCguLAoFWyfhi6FHCR_FNlo9g4Ol8qZGsszdqgGS_2NfynodtyLQErwdp_kOXpPlidJyBnp55kB3sxJ1kXZnndHasREqzi0JzQksFmT-fF-xV45S7aXYW8c6VNC8XXE-Vs16vcxghJ5XE1ic9lFS5cXV9MJIAf_VgVnT6I2yELjcGGBW6hkPfWTuzxnq0BQZzFhngaNWD3s9FcDFgH9aZiNvJpVtIwKCgAywWNKp3BZBEvAq7eT4p7YrA-F3Zj1pklUS2cb0TbcdKQ_2w8Pb85Jdc7VhnsIr1RWoKVbFiqkKnAg8aYumCtXM_KPH3JmuCQ_nQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/actors/1",
-							"protocol": "http",
+							"raw": "https://fsnd-capstone-manuelreyes.herokuapp.com/actors/1",
+							"protocol": "https",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"fsnd-capstone-manuelreyes",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"actors",
 								"1"
@@ -280,18 +356,26 @@
 				{
 					"name": "Get Actor Movies",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNYQUJxQlpUV2V4WXVUTXIydWlTQyJ9.eyJpc3MiOiJodHRwczovL21hbnVlbHJleWVzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDkwMTQ4NzYxZGQ3NDAwNjkyYjBmYmQiLCJhdWQiOiJDYXBzdG9uZUZTTkRfQVBJIiwiaWF0IjoxNjIwNjc3MjE2LCJleHAiOjE2MjA3NjM2MTYsImF6cCI6IlFiRThFSU1GUGowb0U2QXNXT2pxMUcyaDdtVUpBMzRtIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.NXURH0C8bggCK0z3tfCguLAoFWyfhi6FHCR_FNlo9g4Ol8qZGsszdqgGS_2NfynodtyLQErwdp_kOXpPlidJyBnp55kB3sxJ1kXZnndHasREqzi0JzQksFmT-fF-xV45S7aXYW8c6VNC8XXE-Vs16vcxghJ5XE1ic9lFS5cXV9MJIAf_VgVnT6I2yELjcGGBW6hkPfWTuzxnq0BQZzFhngaNWD3s9FcDFgH9aZiNvJpVtIwKCgAywWNKp3BZBEvAq7eT4p7YrA-F3Zj1pklUS2cb0TbcdKQ_2w8Pb85Jdc7VhnsIr1RWoKVbFiqkKnAg8aYumCtXM_KPH3JmuCQ_nQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/actors/1/movies",
-							"protocol": "http",
+							"raw": "https://fsnd-capstone-manuelreyes.herokuapp.com/actors/1/movies",
+							"protocol": "https",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"fsnd-capstone-manuelreyes",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"actors",
 								"1",
@@ -316,15 +400,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/actors/1",
-							"protocol": "http",
+							"raw": "https://fsnd-capstone-manuelreyes.herokuapp.com/actors/1",
+							"protocol": "https",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"fsnd-capstone-manuelreyes",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"actors",
 								"1"
@@ -350,15 +432,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/cast",
-					"protocol": "http",
+					"raw": "https://fsnd-capstone-manuelreyes.herokuapp.com/cast",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"fsnd-capstone-manuelreyes",
+						"herokuapp",
+						"com"
 					],
-					"port": "5000",
 					"path": [
 						"cast"
 					]
