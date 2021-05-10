@@ -30,7 +30,6 @@ class Movie(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String, unique=True, nullable=False)
     release_date = db.Column(db.Date, nullable=False)
-    # cast = db.relationship("Actor", backref=db.backref("MovieCast"), lazy="joined")
     cast = db.relationship("Actor", secondary="MovieCast")
 
     def info(self):
@@ -58,7 +57,6 @@ class Actor(db.Model):
     name = db.Column(db.String, nullable=False, unique=True)
     age = db.Column(db.Integer, nullable=False)
     gender = db.Column(db.String, nullable=False)
-    # filmography = db.relationship("Movie", backref=db.backref("MovieCast"), lazy="joined")
     filmography = db.relationship("Movie", secondary="MovieCast")
 
     def info(self):
