@@ -10,7 +10,7 @@ def create_app(test_config=None):
     setup_db(app)
     CORS(app)
 
-    db_drop_and_create_all()
+    #db_drop_and_create_all()
 
     @app.route('/')
     def get_greeting():
