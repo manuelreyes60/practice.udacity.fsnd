@@ -1,20 +1,48 @@
 import os
 from flask import Flask, request, jsonify, abort
 from flask_cors import CORS
+from authlib.integrations.flask_client import OAuth
 from models import setup_db, db_drop_and_create_all, Movie, Actor, MovieCast
 from auth.auth import AuthError, requires_auth
+
+AUTH0_CLIENT_ID = os.environ['AUTH0_CLIENT_ID']
+AUTH0_CLIENT_SECRET = os.environ['AUTH0_CLIENT_SECRET']
+AUTH0_DOMAIN = os.environ['AUTH0_DOMAIN']
+AUTH0_BASE_URL = 'https://' + os.environ['AUTH0_DOMAIN']
+AUTH0_CALLBACK_URL = os.environ['AUTH0_CALLBACK']
+AUTH0_AUDIENCE = 'CapstoneFSND_API'
 
 def create_app(test_config=None):
 
     app = Flask(__name__)
+    app.secret_key = "secretkey"
+
     setup_db(app)
     CORS(app)
 
     db_drop_and_create_all()
 
+    oauth = OAuth(app)
+
+    auth0 = oauth.register(
+        'auth0',
+        client_id=AUTH0_CLIENT_ID,
+        client_secret=AUTH0_CLIENT_SECRET,
+        api_base_url=AUTH0_BASE_URL,
+        access_token_url=AUTH0_BASE_URL + '/oauth/token',
+        authorize_url=AUTH0_BASE_URL + '/authorize',
+        client_kwargs={
+            'scope': 'openid profile email',
+        },
+    )
+
     @app.route('/')
     def get_greeting():
         return "Welcome to the Casting Agency"
+
+    @app.route('/login')
+    def login():
+        return auth0.authorize_redirect(redirect_uri=AUTH0_CALLBACK_URL, audience=AUTH0_AUDIENCE)
 
     @app.route('/movies')
     @requires_auth('get:movies')
@@ -248,5 +276,13 @@ def create_app(test_config=None):
             "error": 400,
             "message": "bad request"
         }), 400
+
+    @app.errorhandler(422)
+    def unprocessable(error):
+        return jsonify({
+            "success": False,
+            "error": 422,
+            "message": "unprocessable"
+        }), 422
 
     return app

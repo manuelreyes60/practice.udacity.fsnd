@@ -17,19 +17,15 @@ There are three Roles:
     Executive Producer
         All permissions a Casting Director
         Add or delete a movie from the database
+## Prerequisites
+
+- Python 3.9 (Download from [here](https://www.python.org/downloads/)
 
 ## Getting Started
 
 ### Setup Virtual Environment
 
 Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
-
-### Heroku Deployment
-
-Move to the root folder and run:
-```
-git subtree push --prefix projects/Capstone  heroku master
-```
 
 ### PIP Dependencies
 
@@ -41,7 +37,48 @@ pip3 install -r requirements.txt
 
 This will install all of the required packages descriped in the `requirements.txt` file.
 
+### Environment Variables
+
+Run the `setup.sh` file.
+In case of Powershell use `$env:<variable_name>="<variable_value>"`
+
+### Database Setup
+
+1. Modify the setup.sh file or local variables to point to the local/production database (Postgresql)
+2. Update the database with `python .\manage.py db upgrade`
+
+## Running the server
+
+From within the current directory and the created virtual environment, execute `flask run`
+
+#### Heroku Deployment
+
+Move to the root folder and run:
+```
+git subtree push --prefix projects/Capstone heroku master
+```
+
 ## API
+
+### Authentication
+
+To login, visit the `/login` endpoint of the server, this will redirect you to the auth0 login form.
+
+In case there is a need to update the tokens, the following login credentials can be used for each role:
+
+The login information is the following:
+
+Executive Producer:
+E-Mail: producer@test.com
+Password: Producer1!
+
+Casting Director:
+E-Mail: director@test.com
+Password: Director1!
+
+Casting Assistant:
+E-Mail: assistant@test.com
+Password: Assistant1!
 
 ### Endpoints
 
