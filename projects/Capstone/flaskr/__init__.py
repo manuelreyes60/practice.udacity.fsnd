@@ -12,6 +12,7 @@ AUTH0_BASE_URL = 'https://' + os.environ['AUTH0_DOMAIN']
 AUTH0_CALLBACK_URL = os.environ['AUTH0_CALLBACK']
 AUTH0_AUDIENCE = 'CapstoneFSND_API'
 
+
 def create_app(test_config=None):
 
     app = Flask(__name__)
@@ -42,7 +43,9 @@ def create_app(test_config=None):
 
     @app.route('/login')
     def login():
-        return auth0.authorize_redirect(redirect_uri=AUTH0_CALLBACK_URL, audience=AUTH0_AUDIENCE)
+        return auth0.authorize_redirect(
+            redirect_uri=AUTH0_CALLBACK_URL,
+            audience=AUTH0_AUDIENCE)
 
     @app.route('/movies')
     @requires_auth('get:movies')
@@ -60,7 +63,8 @@ def create_app(test_config=None):
         if movie is None:
             abort(404)
 
-        return jsonify({'success': True, 'movie': movie.info() }), 200
+        return jsonify({
+            'success': True, 'movie': movie.info()}), 200
 
     @app.route('/movies', methods=['POST'])
     @requires_auth('post:movies')
@@ -70,7 +74,7 @@ def create_app(test_config=None):
         release_date = body.get("release_date")
 
         if not(title and release_date):
-          abort(400)
+            abort(400)
 
         try:
             movie = Movie(
@@ -102,17 +106,18 @@ def create_app(test_config=None):
         movie.release_date = release_date
 
         try:
-            movie.update()  
+            movie.update()
         except:
             abort(422)
 
-        return jsonify({ 'success': True, 'movie': movie.info() }), 200
+        return jsonify({
+            'success': True, 'movie': movie.info()}), 200
 
     @app.route('/movies/<int:id>', methods=['DELETE'])
     @requires_auth('delete:movies')
     def delete_movie(payload, id):
         movie = Movie.query.get(id)
-        
+
         if movie is None:
             abort(404)
 
@@ -134,7 +139,9 @@ def create_app(test_config=None):
         allCasts = MovieCast.query.filter_by(movie_id=movie.id).join(Actor).all()
         actors = [Actor.query.get(cast.actor_id) for cast in allCasts]
 
-        return jsonify({'success': True, 'cast': [actor.info() for actor in actors] }), 200
+        return jsonify({
+            'success': True,
+            'cast': [actor.info() for actor in actors]}), 200
 
     @app.route('/actors')
     @requires_auth('get:actors')
@@ -152,7 +159,7 @@ def create_app(test_config=None):
         if actor is None:
             abort(404)
 
-        return jsonify({'success': True, 'actor': actor.info() }), 200
+        return jsonify({'success': True, 'actor': actor.info()}), 200
 
     @app.route('/actors/<int:id>/movies')
     @requires_auth('get:actors')
@@ -165,7 +172,9 @@ def create_app(test_config=None):
         allCasts = MovieCast.query.filter_by(actor_id=actor.id).join(Movie).all()
         movies = [Movie.query.get(cast.movie_id) for cast in allCasts]
 
-        return jsonify({'success': True, 'movies': [movie.info() for movie in movies] }), 200
+        return jsonify({
+            'success': True,
+            'movies': [movie.info() for movie in movies]}), 200
 
     @app.route('/actors', methods=['POST'])
     @requires_auth('post:actors')
@@ -176,13 +185,13 @@ def create_app(test_config=None):
         gender = body.get("gender")
 
         if not(name and age and gender):
-          abort(400)
+            abort(400)
 
         try:
             actor = Actor(
-                name = body['name'],
-                age = body['age'],
-                gender = body['gender'],
+                name=body['name'],
+                age=body['age'],
+                gender=body['gender'],
             )
             actor.insert()
         except:
@@ -211,17 +220,17 @@ def create_app(test_config=None):
         actor.gender = gender
 
         try:
-            actor.update()  
+            actor.update()
         except:
             abort(422)
 
-        return jsonify({ 'success': True, 'actor': actor.info() }), 200
+        return jsonify({'success': True, 'actor': actor.info()}), 200
 
     @app.route('/actors/<int:id>', methods=['DELETE'])
     @requires_auth('delete:actors')
     def delete_actor(payload, id):
         actor = Actor.query.get(id)
-        
+
         if actor is None:
             abort(404)
 
@@ -240,12 +249,12 @@ def create_app(test_config=None):
         actor_id = body.get("actor_id")
 
         if not(movie_id and actor_id):
-          abort(400)
+            abort(400)
 
         try:
             movieCast = MovieCast(
-                movie_id = movie_id,
-                actor_id = actor_id,
+                movie_id=movie_id,
+                actor_id=actor_id,
             )
             movieCast.insert()
         except:
