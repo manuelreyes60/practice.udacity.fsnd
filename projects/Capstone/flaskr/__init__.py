@@ -27,6 +27,7 @@ def create_app(test_config=None):
 
     auth0 = oauth.register(
         'auth0',
+        response_type="token",
         client_id=AUTH0_CLIENT_ID,
         client_secret=AUTH0_CLIENT_SECRET,
         api_base_url=AUTH0_BASE_URL,
